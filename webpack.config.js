@@ -28,6 +28,12 @@ function createConfig(env) {
     devtool: isProduction ?
       '#source-map' :
       '#cheap-module-eval-source-map',
+
+    
+    // externals: {
+    //   gsap: 'gsap',
+    //   TweenMax: 'gsap/TweenMax'
+    // },
     plugins: [
       // new webpack.optimize.CommonsChunkPlugin({
       //     name: 'vendor',
@@ -54,6 +60,9 @@ function createConfig(env) {
         openAnalyzer: false,
       }),
     ],
+
+
+
     resolve: {
       extensions: ['.js'],
       alias: {
@@ -66,6 +75,7 @@ function createConfig(env) {
         'debug.addIndicators': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
       },
     },
+
     optimization :{
       minimize: isProduction
     },

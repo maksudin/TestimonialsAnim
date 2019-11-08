@@ -14,4 +14,10 @@
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-unused-vars": 1
   }
+  // "import/no-extraneous-dependencies": [
+  //   "error",
+  //   {
+  //     "devDependencies": true
+  //   }
+  // ]
 }
