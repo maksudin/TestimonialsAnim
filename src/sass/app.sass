@@ -1,0 +1,218 @@
+// done by riverco.de
+@import helpers/index
+@import base/index
+
+$person-info__img--big__size: 72px
+
+*
+    box-sizing: border-box
+body 
+    background: #F6F7F8
+    font-family: 'Rubik', sans-serif
+    @include smooth-font
+    font-smoothing: antialiased
+    
+.out
+    margin: 60px 130px
+
+
+.card-content
+    margin: 32px
+
+
+.flex-container
+    display: flex
+    justify-content: space-between
+    .logo
+        margin: 0
+
+.cards-top
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    margin-bottom: 20px
+    z-index: 4
+
+
+    .logo
+        display: block
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 24px
+
+.card-top--right
+    margin-top: 87px
+    
+
+.cards-bottom
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+
+.cards-left-column
+    display: flex
+    flex-direction: column
+    z-index: 3
+    .card
+        margin-bottom: 20px
+
+.cards-right-column
+    display: flex
+    flex-direction: column
+    .card
+        margin-bottom: 20px
+
+    .logo
+        display: block
+        margin: 0 auto
+
+.card
+    background: #FFFFFF
+    border: 1px solid #EFEFEF
+    box-shadow: 0px 15px 60px rgb(200, 200, 200)
+    border-radius: 8px
+    &--small
+        min-width: 300px
+        max-width: 380px
+
+    &--large
+        max-width: 780px
+    
+    &__text
+        font-size: 16px
+        font-style: normal
+        font-weight: normal
+        color: #1D1D1D
+        &--centered
+            text-align: center
+
+        &--large
+            margin-bottom: 64px
+        &--starbucks
+            margin-top: 28px
+        
+        &--top-margin
+            margin-top: 32px
+        &--bottom-margin
+            margin-bottom: 48px
+
+    &--on-top
+        z-index: 2
+    &--decorative
+        width: 740px
+        height: 290px
+        margin: 0 auto
+        z-index: 1
+        position: relative
+        bottom: 294px
+
+
+
+
+
+.cards-top
+    .person-info
+        margin-top: 56px
+        
+
+.person-info__img
+    width: 46px
+    height: 46px
+    @include image("avatar.png")
+    background-repeat: no-repeat
+    background-size: 95%
+    background-position: left
+    background-color: black
+    border-radius: 50%
+    margin-right: 12px
+
+    &--list
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 32px
+    
+    
+    &--big
+        width: $person-info__img--big__size
+        height: $person-info__img--big__size
+        @include image("avatar3.png")
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: top
+        background-color: black
+        border-radius: 50% 
+
+    &--large
+        width: 101px
+        height: 101px
+        @include image("avatar3.png")
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: top
+        background-color: black
+        border-radius: 50% 
+        position: relative
+        margin:
+            top: 0
+            left: auto
+            right: auto
+            bottom: 0
+        top: 79px
+
+    &--transparent
+        width: 56px
+        height: 56px
+        @include image("avatar2.png")
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: center
+        background-color: black
+        border-radius: 50% 
+        margin-top: -17px
+        margin-left: 20px
+        margin-bottom: 0
+        opacity: 0.3
+
+.person-info
+    display: flex
+    &--large
+        display: flex
+        
+    &--centered
+        text-align: center
+
+    &--top-margin
+        margin-top: 24px
+
+    &--bottom-margin
+        margin-bottom: 16px
+        
+    &__title
+        font-style: normal
+        font-weight: bold
+        font-size: 16px
+        line-height: 150%
+        color: #1D1D1D
+
+    &__sub-text
+        font-size: 14px
+        line-height: 150%
+        color: #ABABAB
+
+    &--large-img-margin
+        margin-top: 97px
+
+    &--border
+        margin-top: 2px
+        border-left: 4px solid #FADB39
+        padding-left: 16px
+        padding-bottom: 25px
+        width: 4px
+        height: 40px
+
+.person-info-text
+    &--starbucks
+        padding-left: 24px
+        margin-top: $person-info__img--big__size / 6
+
