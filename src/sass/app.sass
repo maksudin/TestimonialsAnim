@@ -88,6 +88,7 @@ body
 
         &--large
             margin-bottom: 64px
+            
         &--starbucks
             margin-top: 28px
         
@@ -98,15 +99,16 @@ body
 
     &--on-top
         z-index: 2
+
+
     &--decorative
         width: 740px
         height: 290px
-        margin: 0 auto
         z-index: 1
-        position: relative
-        bottom: 294px
-
-
+        position: absolute
+        margin-left: 20px
+        @include r(1040)
+            width: 0
 
 
 
@@ -194,6 +196,10 @@ body
         font-size: 16px
         line-height: 150%
         color: #1D1D1D
+        &--large
+            font-size: 18px
+            font-weight: bold
+            line-height: 150%
 
     &__sub-text
         font-size: 14px
