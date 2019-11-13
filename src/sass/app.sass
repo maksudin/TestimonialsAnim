@@ -26,8 +26,11 @@ body
 .flex-container
     display: flex
     justify-content: space-between
+    +r(540)
+        flex-direction: column
     .logo
         margin: 0
+    
 
 .cards-top
     display: flex
@@ -68,18 +71,24 @@ body
         display: block
         margin: 0 auto
 
+$card-min-width: 280px
 .card
     background: #FFFFFF
     border: 1px solid #EFEFEF
     box-shadow: 0px 15px 60px rgb(200, 200, 200)
     border-radius: 8px
     opacity: 0
+
     &--small
-        min-width: 300px
+        min-width: $card-min-width
         max-width: 380px
 
     &--large
         max-width: 780px
+        +r(540)
+            min-width: $card-min-width
+            max-width: 380px
+            
     
     &__text
         font-size: 16px
@@ -136,6 +145,11 @@ body
         align-items: center
         justify-content: center
         margin-top: 32px
+        +r(540)
+            display: grid
+            grid-template-columns: auto auto
+            row-gap: 30px
+            
     
     
     &--big
@@ -177,6 +191,8 @@ body
         margin-left: 20px
         margin-bottom: 0
         opacity: 0.3
+        +r(540)
+            display: none
 
 
 
