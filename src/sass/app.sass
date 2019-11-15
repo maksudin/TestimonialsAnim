@@ -72,6 +72,8 @@ body
         margin: 0 auto
 
 $card-min-width: 280px
+$card-max-width: 380px
+
 .card
     background: #FFFFFF
     border: 1px solid #EFEFEF
@@ -81,13 +83,13 @@ $card-min-width: 280px
 
     &--small
         min-width: $card-min-width
-        max-width: 380px
+        max-width: $card-max-width
 
     &--large
         max-width: 780px
         +r(540)
             min-width: $card-min-width
-            max-width: 380px
+            max-width: $card-max-width
             
     
     &__text
@@ -253,3 +255,49 @@ $card-min-width: 280px
     bottom: -50px
     right: -50px
     z-index: 200
+
+.theme-btn
+    width: 50px
+    height: 24px
+    padding: 0
+    border-radius: 30px
+    background-color: #4d4d4d
+    position: absolute
+    right: 50px
+    top: 20px
+    cursor: pointer
+    transition: all .2s ease;
+    display: flex
+    justify-content: space-between
+    +r(540)
+        display: none
+    
+    &__moon
+        width: 15px
+        height: 15px
+        margin: auto 5px
+
+    &__sun
+        width: 15px
+        height: 15px
+        margin: auto 5px
+
+    &__thumb
+        width: 22px
+        height: 22px
+        border: 1px solid #4d4d4d
+        border-radius: 50%
+        background-color: #fafafa
+        position: absolute
+        top: 1px
+        transition: all 2s ease
+        left: 1px
+        // box-shadow: 0 0 2px 3px #0099e0f8
+        &--sun
+            left: 27px
+            
+            // transition: all .25s ease
+            
+        &--moon
+            border: 1px solid #4d4d4d;
+
